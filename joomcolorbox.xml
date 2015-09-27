@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="joomgallery" version="3.0" method="upgrade">
+  <name>plg_joomgallery_joomcolorbox</name>
+  <creationDate>14.02.2013</creationDate>
+  <author>JoomGallery::Project Team</author>
+  <authorEmail>team@joomgallery.net</authorEmail>  
+  <authorUrl>www.joomgallery.net</authorUrl>
+  <copyright>(C) 2013 JoomGallery::Project Team</copyright>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <version>3.0</version>
+  <description>PLG_JOOMGALLERY_JOOMCOLORBOX_DESC</description>
+  <files>
+    <filename plugin="joomcolorbox">joomcolorbox.php</filename>
+    <filename>index.html</filename>
+    <filename>changelog.php</filename>
+  </files>
+  <media destination="plg_joomcolorbox" folder="media">
+    <filename>index.html</filename>
+    <filename>jquery.colorbox.js</filename>
+    <filename>jquery.colorbox-min.js</filename>
+    <folder>style1</folder>
+    <folder>style2</folder>
+    <folder>style3</folder>
+    <folder>style4</folder>
+    <folder>style5</folder>
+  </media>
+  <languages>
+    <language tag="en-GB">language/en-GB/en-GB.plg_joomgallery_joomcolorbox.ini</language>
+    <language tag="en-GB">language/en-GB/en-GB.plg_joomgallery_joomcolorbox.sys.ini</language>
+    <language tag="de-DE">language/de-DE/de-DE.plg_joomgallery_joomcolorbox.ini</language>
+    <language tag="de-DE">language/de-DE/de-DE.plg_joomgallery_joomcolorbox.sys.ini</language>
+  </languages>
+  <config>
+    <fields name="params">
+      <fieldset name="basic">
+          <field name="cfg_transition" type="list" default="elastic" label="PLG_JOOMGALLERY_JOOMCOLORBOX_TRANSITION_LBL" description="PLG_JOOMGALLERY_JOOMCOLORBOX_TRANSITION_DESC">
+            <option value="none">PLG_JOOMGALLERY_JOOMCOLORBOX_TRANSITION_NONE_LBL</option>
+            <option value="elastic">PLG_JOOMGALLERY_JOOMCOLORBOX_TRANSITION_ELASTIC_LBL</option>
+            <option value="fade">PLG_JOOMGALLERY_JOOMCOLORBOX_TRANSITION_FADE_LBL</option>
+          </field>
+          <field name="cfg_transitionspeed" class="validate-numeric" type="text" default="300" label="PLG_JOOMGALLERY_JOOMCOLORBOX_TRANSITIONSPEED_LBL" description="PLG_JOOMGALLERY_JOOMCOLORBOX_TRANSITIONSPEED_DESC" required="true"/>
+          <field name="cfg_preloading" class="btn-group" type="radio" default="0" label="PLG_JOOMGALLERY_JOOMCOLORBOX_PRELOADING_LBL" description="PLG_JOOMGALLERY_JOOMCOLORBOX_PRELOADING_DESC">
+            <option value="0">PLG_JOOMGALLERY_JOOMCOLORBOX_NO_LBL</option>
+            <option value="1">PLG_JOOMGALLERY_JOOMCOLORBOX_YES_LBL</option>
+          </field>    
+          <field name="cfg_loop" class="btn-group" type="radio" default="1" label="PLG_JOOMGALLERY_JOOMCOLORBOX_LOOP_LBL" description="PLG_JOOMGALLERY_JOOMCOLORBOX_LOOP_DESC">
+            <option value="0">PLG_JOOMGALLERY_JOOMCOLORBOX_NO_LBL</option>
+            <option value="1">PLG_JOOMGALLERY_JOOMCOLORBOX_YES_LBL</option>
+          </field>    
+      </fieldset>
+      <fieldset name="PLG_JOOMGALLERY_JOOMCOLORBOX_STYLING_PARAMETER_LBL" label="PLG_JOOMGALLERY_JOOMCOLORBOX_STYLING_PARAMETER_LBL">
+          <field name="cfg_style" type="list" default="1" label="PLG_JOOMGALLERY_JOOMCOLORBOX_STYLE_LBL" description="PLG_JOOMGALLERY_JOOMCOLORBOX_STYLE_DESC">
+            <option value="1">PLG_JOOMGALLERY_JOOMCOLORBOX_STYLE_1_LBL</option>
+            <option value="2">PLG_JOOMGALLERY_JOOMCOLORBOX_STYLE_2_LBL</option>
+            <option value="3">PLG_JOOMGALLERY_JOOMCOLORBOX_STYLE_3_LBL</option>
+            <option value="4">PLG_JOOMGALLERY_JOOMCOLORBOX_STYLE_4_LBL</option>
+            <option value="5">PLG_JOOMGALLERY_JOOMCOLORBOX_STYLE_5_LBL</option>
+          </field>
+          <field name="cfg_opacity" class="validate-numeric" type="text" default="0.9" label="PLG_JOOMGALLERY_JOOMCOLORBOX_OPACITY_LBL" description="PLG_JOOMGALLERY_JOOMCOLORBOX_OPACITY_DESC" required="true"/>      
+      </fieldset>
+      <fieldset name="PLG_JOOMGALLERY_JOOMCOLORBOX_SLIDESHOW_PARAMETER_LBL" label="PLG_JOOMGALLERY_JOOMCOLORBOX_SLIDESHOW_PARAMETER_LBL">
+          <field name="cfg_slideenable" class="btn-group" type="radio" default="0" label="PLG_JOOMGALLERY_JOOMCOLORBOX_SLIDEENABLE_LBL" description="PLG_JOOMGALLERY_JOOMCOLORBOX_SLIDEENABLE_DESC">
+            <option value="0">PLG_JOOMGALLERY_JOOMCOLORBOX_NO_LBL</option>
+            <option value="1">PLG_JOOMGALLERY_JOOMCOLORBOX_YES_LBL</option>
+          </field>              
+          <field name="cfg_slideinterval" class="validate-numeric" type="text" default="4000" label="PLG_JOOMGALLERY_JOOMCOLORBOX_SLIDEINTERVAL_LBL" description="PLG_JOOMGALLERY_JOOMCOLORBOX_SLIDEINTERVAL_DESC" required="true"/>
+          <field name="cfg_slideautostart" class="btn-group" type="radio" default="0" label="PLG_JOOMGALLERY_JOOMCOLORBOX_SLIDEAUTOSTART_LBL" description="PLG_JOOMGALLERY_JOOMCOLORBOX_SLIDEAUTOSTART_DESC">
+            <option value="0">PLG_JOOMGALLERY_JOOMCOLORBOX_NO_LBL</option>
+            <option value="1">PLG_JOOMGALLERY_JOOMCOLORBOX_YES_LBL</option>
+          </field>    
+      </fieldset>
+    </fields>
+  </config>
+  <updateservers>
+    <server type="collection" priority="1" name="JoomGallery Update Service">http://www.en.joomgallery.net/components/com_newversion/xml/extensions3.xml</server>
+  </updateservers>
+</extension>
